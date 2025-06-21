@@ -1,0 +1,17 @@
+{
+    "name": "erik.riccioppo/re-wallet",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Wallet\\": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "erik.riccioppo"
+        }
+    ],
+    "require": {
+        "guzzlehttp/psr7": "^2.7"
+    }
+}
