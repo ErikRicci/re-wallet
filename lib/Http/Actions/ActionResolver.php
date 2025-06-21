@@ -2,6 +2,7 @@
 
 namespace Wallet\Http\Actions;
 
+use Wallet\Http\Actions\Currency\GetCurrenciesAction;
 use Wallet\Http\Actions\Internal\BaseAction;
 use Wallet\Http\Request\RequestResolver;
 
@@ -23,6 +24,7 @@ final class ActionResolver
 
         return match ($path_and_method) {
             ['/', 'GET'] => new DebugAppVersionAction(),
+            ['/api/currencies', 'GET'] => new GetCurrenciesAction(),
             default => self::fallbackAction(),
         };
     }
