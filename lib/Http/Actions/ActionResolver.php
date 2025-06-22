@@ -2,6 +2,8 @@
 
 namespace Wallet\Http\Actions;
 
+use Wallet\Http\Actions\App\GetDepositTypesAction;
+use Wallet\Http\Actions\App\GetMovementTypesAction;
 use Wallet\Http\Actions\Currency\GetCurrenciesAction;
 use Wallet\Http\Actions\Internal\BaseAction;
 use Wallet\Http\Request\RequestResolver;
@@ -25,6 +27,8 @@ final class ActionResolver
         return match ($path_and_method) {
             ['/', 'GET'] => new DebugAppVersionAction(),
             ['/api/currencies', 'GET'] => new GetCurrenciesAction(),
+            ['/api/movement-types', 'GET'] => new GetMovementTypesAction(),
+            ['/api/deposit-types', 'GET'] => new GetDepositTypesAction(),
             default => self::fallbackAction(),
         };
     }
