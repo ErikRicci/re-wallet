@@ -6,6 +6,7 @@ use Wallet\Http\Actions\App\GetDepositTypesAction;
 use Wallet\Http\Actions\App\GetMovementTypesAction;
 use Wallet\Http\Actions\Currency\GetCurrenciesAction;
 use Wallet\Http\Actions\Internal\BaseAction;
+use Wallet\Http\Actions\Wallet\GetAuthenticatedUserWalletAction;
 use Wallet\Http\Request\RequestResolver;
 
 final class ActionResolver
@@ -29,6 +30,7 @@ final class ActionResolver
             ['/api/currencies', 'GET'] => new GetCurrenciesAction(),
             ['/api/movement-types', 'GET'] => new GetMovementTypesAction(),
             ['/api/deposit-types', 'GET'] => new GetDepositTypesAction(),
+            ['/api/my-wallet', 'GET'] => new GetAuthenticatedUserWalletAction(),
             default => self::fallbackAction(),
         };
     }
@@ -42,8 +44,8 @@ final class ActionResolver
                 $this->response(
                     http_code: 404,
                     response: [
-                        'error' => 'Not Found',
                         'message' => 'The requested resource could not be found.',
+                        'data' => [],
                     ]
                 );
             }

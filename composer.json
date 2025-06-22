@@ -11,9 +11,16 @@
             "name": "erik.riccioppo"
         }
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../alohomora"
+        }
+    ],
     "require": {
         "guzzlehttp/psr7": "^2.7",
         "adodb/adodb-php": "^5.22",
-        "robmorgan/phinx": "^0.16.9"
+        "robmorgan/phinx": "^0.16.9",
+        "erik.riccioppo/alohomora": "^1.0"
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8ee340bf75d81f6b0ad173010197fd7",
+    "content-hash": "e480845b650f69c92d102f2d381b2d24",
     "packages": [
         {
             "name": "adodb/adodb-php",
@@ -390,6 +390,36 @@
                 "source": "https://github.com/cakephp/utility"
             },
             "time": "2025-05-21T14:35:19+00:00"
+        },
+        {
+            "name": "erik.riccioppo/alohomora",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../alohomora",
+                "reference": "39633a09b3f1b6dae4401a68ad85c702b047894e"
+            },
+            "require": {
+                "adodb/adodb-php": "^5.22",
+                "guzzlehttp/psr7": "^2.7",
+                "robmorgan/phinx": "^0.16.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alohomora\\": "lib/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "ErikRicci",
+                    "email": "erikdavinci@gmail.com"
+                }
+            ],
+            "description": "SDK used to authenticate whatever is the Auth method provided",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "guzzlehttp/psr7",
